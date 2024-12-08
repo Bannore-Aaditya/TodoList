@@ -1,0 +1,8 @@
+<div class="mb-3 form-check">
+  <h5 [class]="{'strike':!todo.active}">{{todo.title}}</h5>
+  <p [class]="{'strike':!todo.active}">{{todo.desc}}</p>
+
+  <input type="checkbox" class="form-check-input" id="todo{{i}}" (click)="onCheckboxClick(todo)" [checked] = "!todo.active">
+  <label class="form-check-label" for="todo{{i}}">Mark As Done</label>
+</div>
+<button class="btn btn-sm btn-danger" (click)="onClick(todo)">Delete</button>
